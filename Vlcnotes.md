@@ -18,3 +18,11 @@
 > b.[VLC播放RTSP视频流遇到的问题](https://zhuanlan.zhihu.com/p/30595614) :通过这里的方式，可以拿到最后的流，可以实现截图，但是未实现录制视频
 
 > c.[Vlc for Android全面阐述](https://www.bbsmax.com/A/nAJvAQKGzr/) ：很全面 从编译到修改C文件
+
+> d.[vlc播放网络流延时参数设置](http://blog.csdn.net/jacke121/article/details/54565380)
+
+### 三、编译成功后
+
+> a.[遇到的问题](http://blog.csdn.net/keleeat/article/details/52625532)
+
+> b[对a遇到的问题最后一问的补充](https://www.wenji8.com/p/657pQdG.html)
