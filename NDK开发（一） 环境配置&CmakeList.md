@@ -62,13 +62,13 @@ cmake_minimum_required(VERSION 3.4.1)
 set(CMAKE_VERBOSE_MAKEFILE on)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 
-# 工程路径 绝对路径
+# 工程路径 绝对路径   可以不定义使用绝对路径，直接使用 ${CMAKE_SOURCE_DIR}
 set(pathToProject G:/ASworkSpace/CommunicationTest/Communication)
 
-# 配置加载native依赖
+# 配置加载native依赖 （头文件）
 include_directories(${pathToProject}/app/src/main/cpp/include)
 
-# 添加待编译的文件
+# 添加待编译的文件  使用相对路径 ：${CMAKE_SOURCE_DIR}/src/main/cpp/interface.cpp
 add_library(native-lib SHARED             
 ${pathToProject}/app/src/main/cpp/interface.cpp
 ${pathToProject}/app/src/main/cpp/msl.cpp
@@ -93,13 +93,14 @@ set_target_properties(lib_five PROPERTIES IMPORTED_LOCATION ${pathToProject}/app
 find_library( # Sets the name of the path variable.
               log-lib
               log )
-#链接库  可能出现无法引用的情况  也可以使用 {lib_one} 的方式去书写
+#链接库  可能出现无法引用的情况  也可以使用 ${lib_one} 的方式去引用
 target_link_libraries(   native-lib
                          lib_one
                          lib_two
                          lib_three
                          lib_four
                          lib_five
+                         # ${lib_one} 这样引用也可以
                          ${log-lib})
 ```
 # 三、编译成功
