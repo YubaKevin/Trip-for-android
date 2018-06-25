@@ -14,7 +14,7 @@
 # 二、AndroidStudio 3.0.1 中的使用
 ##### 1.项目结构 
 ######     a.cpp下创建include文件 用于放.h头文件
-######     b.main下建立 jniLibs 文件夹 用于存放第三方动态.so库
+######     b.main下建立 jniLibs 文件夹 用于存放第三方动态.so库（需要放置在对应的ABI文件夹中）
 
 ##### 1.app下的buildgradle 中 android { } 内
 ```
