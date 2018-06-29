@@ -21,7 +21,7 @@
                 jniLibs.srcDirs = ['libs']
             }
         }
-	5.最重要的一步：将jni类复制过来，要保证jni类的路径和你编译.so的路径一致！
+	5.最重要的一步：将jni类复制过来（也可以在写Jni的时候将jni类的包打成jar，在依赖到项目中使用），要保证jni类的路径和你编译.so的路径一致！
 	 在编译.so的时候，我们的包路径是：com.example.kevin.MyJniUtils，类名是JniUtils （参加NDK开发（二））
 	 所以在我们这里要保持路径需要创建相同路径包，我这里包路径是相同的，只要复制MyJniUtils和JniUtils类就好了
 	 
