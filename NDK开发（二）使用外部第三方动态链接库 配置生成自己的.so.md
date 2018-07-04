@@ -23,9 +23,9 @@
             }
         }
         
-        sourceSets {
-            main { 
-                JNILIBS.SRCDIRS = ['SRC/MAIN/JNILIBS']
+           sourceSets {
+            main {
+                jniLibs.srcDirs = ['src/main/jniLibs']
             }
         }
                 }
